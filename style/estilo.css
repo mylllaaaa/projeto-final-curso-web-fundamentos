@@ -1,0 +1,32 @@
+:root{
+    --page-bg: #b8b8ff;
+    --color--logo: #9381ff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: var(--page-bg) linear-gradient(to bottom, #e7ecefff, #e7ecef00) fixed;
+}
+
+.logo{
+    background-color: #e7ecef;
+}
+
+.logo__text{
+    font-family: "Gravitas One", sans-serif;
+    font-weight: 300;
+    color: var(--color--logo);
+}
+
+.logo__icon{
+    color: var(--color--logo);
+    font-size: 2em;
+}
