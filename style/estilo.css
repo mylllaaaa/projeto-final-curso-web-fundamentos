@@ -30,3 +30,26 @@ body{
     color: var(--color--logo);
     font-size: 2em;
 }
+
+.games__card__img{
+    width: 25%;
+    aspect-ratio: 16/9;
+}
+
+.reviews__carroussel__img{
+    width: 20em;
+    aspect-ratio: 1;
+}
+.reviews__carroussel__img img{
+    width: 100%;
+}
+
+.books__card__img{
+    width: 12%;
+    aspect-ratio: 1;
+}
+
+.artists__card__img{
+    width: 12em;
+    aspect-ratio: 1;
+}
