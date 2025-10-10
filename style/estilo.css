@@ -282,6 +282,36 @@ main{
     aspect-ratio: 1;
 }
 
+.extras,
+.extras__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: var(--sub-section-distance-gap);
+}
+
+.extras__content{
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.extras__content i{
+    font-size: xx-large;
+}
+
+.extra__title{
+    display: block;
+    margin-top: .7rem;
+}
+
+@media screen and (min-width: 50rem) {
+    .extras__content > div {
+        flex: 1 1 calc(33.333% - var(--sub-section-distance-gap)); /* 3 por linha */
+        box-sizing: border-box;
+    }
+}
+
 /* ------------------------------- */
 
 .artists__card__img{
