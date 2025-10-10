@@ -191,9 +191,46 @@ main > *{
     aspect-ratio: 16/9;
 }
 
-.reviews__carroussel__img{
-    width: 20em;
-    aspect-ratio: 1;
+.reviews{
+    display: flex;
+    
+    flex-direction: column;
+    gap: var(--sub-section-distance-gap);
+}
+
+.reviews__carroussel{
+    display: flex;
+    justify-content: center;
+}
+
+.reviews__carroussel__wrapper{
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+    padding-right: var(--grid-gap);
+    width: calc(100vw - (var(--grid-margin) * 2));
+
+    scroll-snap-type: x mandatory;
+
+    img{
+        margin-left: var(--grid-gap);
+        width: calc(100vw - (var(--grid-margin) * 2));
+        flex: 0 0 calc(100vw - (var(--grid-margin) * 2));
+
+        scroll-snap-align: center;
+    }
+}
+
+@media screen and (min-width: 36rem) {
+    .reviews__carroussel__wrapper{
+        width: calc((100vw - (var(--grid-margin) * 2))/1.8);
+    }
+}
+
+@media screen and (min-width: 65rem) {
+    .reviews__carroussel__wrapper{
+        width: calc((100vw - (var(--grid-margin) * 2))/2.7);
+    }
 }
 
 /* ------------------------------- */
