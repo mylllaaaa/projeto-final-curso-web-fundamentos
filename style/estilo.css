@@ -1,6 +1,7 @@
 :root{
     --page-bg: #b8b8ff;
     --color--logo: #9381ff;
+    --cor--fundo: linear-gradient(to right, #c77dff, var(--color--logo));
 
     --grid-gap: .75rem;
     --grid-margin: 1.5rem;
@@ -25,6 +26,7 @@
 }
 
 body{
+    line-height: 1.4;
     color: rgba(0, 0, 0, 0.594);
     font-family: "Inter", sans-serif;
     font-weight: 400;
@@ -85,6 +87,7 @@ p{
     border-radius: 10rem;
     font-weight: 700;
     transition: .3s ease;
+    max-width: fit-content;
 }
 
 .btn:hover {
@@ -111,6 +114,7 @@ p{
 
 main > *{
     margin-top: var(--section-distance-top);
+    padding: 1rem 0;
 }
 
 main{
@@ -125,7 +129,7 @@ main{
     }
 
     ::-webkit-scrollbar-thumb {
-        background: var(--color--logo);         
+        background: #7b2cbf;         
         border-radius: 10px;
     }
 }
@@ -251,9 +255,11 @@ main{
 
 .reviews{
     display: flex;
-    
     flex-direction: column;
     gap: var(--sub-section-distance-gap);
+
+    background-image: var(--cor--fundo);
+    color: rgba(255, 255, 255, 0.836);
 }
 
 .reviews__carroussel{
@@ -312,6 +318,12 @@ main{
     aspect-ratio: 1;
 }
 
+.extras{
+    min-height: 30rem;
+    background-image: var(--cor--fundo);
+    color: rgba(255, 255, 255, 0.836);
+}
+
 .extras,
 .extras__content{
     display: flex;
@@ -328,6 +340,10 @@ main{
 
 .extras__content i{
     font-size: xx-large;
+}
+
+.extras__content a{
+    color: rgba(255, 255, 255, 0.836);
 }
 
 .extra__title{
@@ -381,7 +397,6 @@ main{
     background-color: #1DB954;
     color: #FFF;
     box-shadow: 2px 2px 6px #1914147a;
-    max-width: fit-content;
 }
 
 .artists__card__img{
@@ -389,6 +404,14 @@ main{
     border-radius: 10%;
 }
 
+.artists__card__description{
+    display: flex;
+    flex-direction: column;
+}
+
+.artists__card__description .btn{
+    margin: .7rem .5rem .5rem auto;
+}
 /* ------------------------------- */
 
 .footer{
@@ -442,6 +465,21 @@ main{
 
 .sm-hide{
     display: none;
+}
+
+@media screen and (width <= 64rem) {
+    .sm-sr-only{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        white-space: nowrap;
+        border: 0;
+        top: 0;
+    }
 }
 
 @media screen and (width > 64rem){
@@ -554,6 +592,14 @@ main{
 
     .books__card:nth-child(odd) .books__card__ctas{
         justify-content: end;
+    }
+
+    .artists__card__description{
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
     }
 }
 
