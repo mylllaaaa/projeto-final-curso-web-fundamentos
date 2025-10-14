@@ -2,6 +2,9 @@
     --page-bg: #b8b8ff;
     --color--logo: #9381ff;
     --cor--fundo: linear-gradient(to right, #c77dff, var(--color--logo));
+    --color--btn--buy: #5a189a;
+
+    --h1-h2-color: #160049c0;
 
     --grid-gap: .75rem;
     --grid-margin: 1.5rem;
@@ -51,17 +54,23 @@ h1{
     font-size: var(--h1-size);
     font-weight: 900;
     line-height: 1;
+    color: var(--h1-h2-color);
 }
 
 .h2{
     text-align: center;
     font-weight: 900;
     font-size: var(--h2-size);
+    color: var(--h1-h2-color);
 }
 
 .h3{
     font-size: var(--h3-size);
     font-weight: 900;
+}
+
+h4{
+    color: var(--color--btn--buy);
 }
 
 p{
@@ -103,8 +112,8 @@ p{
 
 .btn--buy{
     color: white;
-    background-color: #5a189a;
-    box-shadow: 2px 2px 4px #5a189a;
+    background-color: var(--color--btn--buy);
+    box-shadow: 2px 2px 4px var(--color--btn--buy);
 }
 
 .btn--buy:hover{
@@ -259,7 +268,10 @@ main{
     gap: var(--sub-section-distance-gap);
 
     background-image: var(--cor--fundo);
-    color: rgba(255, 255, 255, 0.836);
+    
+    h2, p{
+        color: rgba(255, 255, 255, 0.836);
+    }
 }
 
 .reviews__carroussel{
@@ -330,6 +342,10 @@ main{
     flex-direction: column;
     justify-content: space-around;
     gap: var(--sub-section-distance-gap);
+
+    h2, p, a{
+        color: rgba(255, 255, 255, 0.836);
+    }
 }
 
 .extras__content{
@@ -339,11 +355,16 @@ main{
 }
 
 .extras__content i{
-    font-size: xx-large;
+    font-size: 2rem;
 }
 
-.extras__content a{
-    color: rgba(255, 255, 255, 0.836);
+.extras__content a {
+    transition: 0.2s ease;
+}
+
+.extras__content a:hover {
+    color: #efd9ce;
+    font-size: 1.5rem;
 }
 
 .extra__title{
@@ -506,7 +527,8 @@ main{
         top: 0;
         left: 0;
         width: 100%;
-        padding-top: 3rem;
+        padding-top: 1rem;
+        padding-bottom: .5rem;
         background: var(--page-bg) linear-gradient(to bottom, #e7ecefff 30%, #e7ecef00) fixed;
     }
 
