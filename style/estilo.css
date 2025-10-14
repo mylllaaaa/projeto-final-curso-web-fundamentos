@@ -423,6 +423,7 @@ main{
 .artists__card__img{
     width: 25%;
     border-radius: 10%;
+    aspect-ratio: 1;
 }
 
 .artists__card__description{
@@ -486,6 +487,24 @@ main{
 
 .sm-hide{
     display: none;
+}
+
+@media screen and (min-width: 36rem) {
+    .reviews__carroussel__wrapper{
+        width: calc((100% - (var(--grid-margin) * 2))/1.8);
+    }
+
+    .games__card__ctas{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 50rem) {
+    .extras__content > div {
+        flex: 1 1 calc(33.333% - var(--sub-section-distance-gap)); 
+        box-sizing: border-box;
+    }
 }
 
 @media screen and (width <= 64rem) {
@@ -576,7 +595,6 @@ main{
     }
 
     .games__card__ctas{
-        flex-direction: row;
         justify-content: end;
     }
 
@@ -636,6 +654,12 @@ main{
         --sub-section-distance-gap: 7.75rem; 
     }
 
+    main{
+        ::-webkit-scrollbar {
+            height: 10px;             
+        }
+    }
+
     .header{
         padding: 3rem 0;
     }
@@ -649,11 +673,62 @@ main{
             width: fit-content;
         }
     }
-}
 
-@media screen and (min-width: 36rem) {
-    .reviews__carroussel__wrapper{
-        width: calc((100% - (var(--grid-margin) * 2))/1.8);
+    .games__card{
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .games__card__img{
+        grid-column: 2 / 6;
+    }
+
+    .games__card__content{
+        grid-column: 6 / -2;
+    }
+
+    .books__card{
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .books__card__img{
+        grid-column: 2 / 5;
+    }
+
+    .books__card__content{
+        grid-column: 5 / -2;
+    }
+
+    .books__card:nth-child(odd){
+        .books__card__img{
+            grid-column: 9 / -2;
+        }
+
+        .books__card__content{
+            grid-column: 2 / 9;
+        }
+    }
+
+    .extras {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        & > * {
+            grid-column: 2 / -2;
+        }
+    }
+
+    .artists__card{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .artists__card__img{
+        grid-column: 2 / 5;
+        width: 100%;
+    }
+
+    .artists__card__content{
+        grid-column: 5 / -2;
     }
 }
 
@@ -663,9 +738,3 @@ main{
     }
 }
 
-@media screen and (min-width: 50rem) {
-    .extras__content > div {
-        flex: 1 1 calc(33.333% - var(--sub-section-distance-gap)); 
-        box-sizing: border-box;
-    }
-}
