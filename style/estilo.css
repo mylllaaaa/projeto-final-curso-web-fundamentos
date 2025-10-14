@@ -265,7 +265,7 @@ main{
 .reviews{
     display: flex;
     flex-direction: column;
-    gap: var(--sub-section-distance-gap);
+    gap: 3rem;
 
     background-image: var(--cor--fundo);
     
@@ -364,7 +364,7 @@ main{
 
 .extras__content a:hover {
     color: #efd9ce;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .extra__title{
@@ -625,6 +625,32 @@ main{
     }
 }
 
+@media screen and (width > 90rem) {
+    :root{
+        --grid-margin: 4rem;
+        --h1--size: 4rem;
+        --h2--size: 2.5rem;
+        --h3--size: 2rem;
+
+        --section-distance-top: 9rem;
+        --sub-section-distance-gap: 7.75rem; 
+    }
+
+    .header{
+        padding: 3rem 0;
+    }
+
+    .header .container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .logo{
+            width: fit-content;
+        }
+    }
+}
+
 @media screen and (min-width: 36rem) {
     .reviews__carroussel__wrapper{
         width: calc((100% - (var(--grid-margin) * 2))/1.8);
@@ -633,7 +659,7 @@ main{
 
 @media screen and (min-width: 64rem) {
     .reviews__carroussel__wrapper{
-        width: calc((100% - (var(--grid-margin) * 2))/2.7);
+        width: calc((100% - (var(--grid-margin) * 2))/2.2);
     }
 }
 
