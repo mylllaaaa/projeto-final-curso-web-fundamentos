@@ -467,6 +467,12 @@ main{
     font-size: 2rem;
 }
 
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid-gap);
+}
+
 /* ------------------------------- */
 
 .section__title{
@@ -728,6 +734,20 @@ main{
     }
 
     .artists__card__content{
+        grid-column: 5 / -2;
+    }
+
+    .footer .container {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .logo__text{
+        grid-column: 2 / 5;
+    }
+
+    .footer__links{
         grid-column: 5 / -2;
     }
 }
