@@ -667,7 +667,7 @@ main{
     }
 
     .header{
-        padding: 3rem 0;
+        padding: 1rem 0;
     }
 
     .header .container{
@@ -749,6 +749,25 @@ main{
 
     .footer__links{
         grid-column: 5 / -2;
+    }
+
+    .hero{
+        background-image: url(/images/icons8-game-controller-100.png), url(/images/icons8-books-100.png), url(/images/icons8-musical-note-100.png), url(/images/icons8-heart-100.png);
+        background-repeat: no-repeat;
+        background-position: left 5% top,
+            right 5% top ,
+            left 20% bottom,
+            right 20% bottom;
+    }
+
+    .hero .container{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 5rem;
+    }
+
+    .hero .container > *{
+        grid-column: 2 / -2;
     }
 }
 
