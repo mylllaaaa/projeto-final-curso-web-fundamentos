@@ -111,8 +111,8 @@
                 <h2 class="h2">Reviews <span class="title--thin">O que outras pessoas acharam desses jogos</span></h2>
             </div>
 
-            <section class="reviews__carroussel">
-                <div class="reviews__carroussel__wrapper">
+            <section class="reviews__carousel">
+                <div class="reviews__carousel__wrapper">
                     <img src="images/hk_review.png" alt="Review de Hollow Knight no Metacritic">
 
                     <img src="images/balatro_review.png" alt="Review de Balatro no Metacritic">
@@ -223,9 +223,10 @@
                 <span class="title--thin">Bandas & Artistas Solos que eu ouço sempre</span></h2>
             </div>
 
-            <div class="artists__carroussel">
-                <div class="artists__carroussel__wrapper">
-                    <article class="artists__card">
+            <div class="artists__carousel" data-carousel-indicators="artists__carousel-indicators">
+                <button class="carousel-btn prev sm-hide lg-show" data-carousel-prev> <img src="/images/icons8-arrow-left.png" alt=""> </button>
+                <div class="artists__carousel__wrapper" data-carousel-wrapper>
+                    <article class="artists__card" data-carousel-items>
                         <img src="images/Fontaines-D.C.jpg" alt="Foto da banda The Marías" class="artists__card__img">
 
                         <div class="artists__card__content">
@@ -260,7 +261,7 @@
                         </div>
                     </article>
 
-                    <article class="artists__card">
+                    <article class="artists__card" data-carousel-items>
                         <img src="images/the-marias.webp" alt="Foto da banda Fontaines D.C." class="artists__card__img">
 
                         <div class="artists__card__content">
@@ -278,7 +279,7 @@
                         </div>
                     </article>
 
-                    <article class="artists__card">
+                    <article class="artists__card" data-carousel-items>
                         <img src="images/clairo.jpg" alt="Foto da artista Clairo" class="artists__card__img">
 
                         <div class="artists__card__content">
@@ -296,7 +297,9 @@
                         </div>
                     </article>
                 </div>
+                <button class="carousel-btn next sm-hide lg-show" data-carousel-next> <img src="/images/icons8-arrow-right.png" alt=""> </button>
             </div>
+            <div class="carousel-indicators" id="artists__carousel-indicators"></div>
         </section>
     </main>
 
@@ -315,6 +318,13 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/artists.js"></script>
+
+    <script>
+        document.body.classList.replace("no-js", "js")
+        new Carousel(".artists__carousel").init()
+    </script>
 </body>
 
 </html>
